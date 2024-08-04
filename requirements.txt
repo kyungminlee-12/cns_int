@@ -6,4 +6,4 @@ streamlit-option-menu
 Image
 pandas
 numpy
-stylable_container
+# stylable-container
