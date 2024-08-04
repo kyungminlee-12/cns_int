@@ -11,7 +11,7 @@ from streamlit_extras.colored_header import colored_header
 from PIL import Image
 
 
-im = Image.open("images\main_logo_green.png")
+im = Image.open("images/main_logo_green.png")
 
 # 1752, 680
 image_resize = im.resize((219, 85))
