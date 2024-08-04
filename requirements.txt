@@ -6,4 +6,7 @@ streamlit-option-menu
 Image
 pandas
 numpy
+streamlit-shadcn-ui>=0.1.18
+streamlit_extras
+pygwalker>=0.4.8.3
 # stylable-container
