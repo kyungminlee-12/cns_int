@@ -2,11 +2,21 @@
 # plotly==5.18.0
 # Python 3.11.5
 streamlit
-streamlit-option-menu
-Image
 pandas
-numpy
 streamlit-shadcn-ui>=0.1.18
 streamlit_extras
-pygwalker>=0.4.8.3
+Pillow
+
+streamlit-option-menu
+numpy
+
+# Image
+# pygwalker>=0.4.8.3
 # stylable-container
+
+
+import streamlit as st
+import pandas as pd
+import streamlit_shadcn_ui as ui
+from streamlit_extras.colored_header import colored_header 
+from PIL import Image
