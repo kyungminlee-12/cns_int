@@ -61,9 +61,21 @@ def show_amt_c02_discharged_test():
     cur_c02_discharged = conn.query(select_data_query, ttl=3)
     df_co2 = pd.DataFrame(cur_c02_discharged)
 
-    cur_all_res  = float(df_co2.iloc[0]["res_value"])   # float(df_co2.loc[df_co2['id']=='ALL']["res_value"])
-    cur_hour_res = float(df_co2.iloc[1]["res_value"])   # float(df_co2.loc[df_co2['id']=='HOUR']["res_value"])
-    cur_min_res  = float(df_co2.iloc[2]["res_value"])   # float(df_co2.loc[df_co2['id']=='MIN']["res_value"])
+    all_res = df_co2.iloc[0]["res_value"]
+    hour_res = df_co2.iloc[1]["res_value"]
+    min_res = df_co2.iloc[2]["res_value"]
+
+    if all_res is None:
+        all_res = 0
+    if hour_res is None:
+        hour_res = 0
+    if min_res is None:
+        min_res = 0
+    
+    cur_all_res  = float(all_res)   # float(df_co2.loc[df_co2['id']=='ALL']["res_value"])
+    cur_hour_res = float(hour_res)   # float(df_co2.loc[df_co2['id']=='HOUR']["res_value"])
+    cur_min_res  = float(min_res)   # float(df_co2.loc[df_co2['id']=='MIN']["res_value"])
+
     cols = st.columns(3)
     with cols[0]:
         ui.card(title="TOTAL", content=cur_all_res, description= "total CO2 reduction" , key="card1").render()
