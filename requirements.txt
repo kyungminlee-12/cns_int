@@ -6,9 +6,13 @@ pandas
 streamlit-shadcn-ui>=0.1.18
 streamlit_extras
 Pillow
+
 sqlalchemy
-mysqlclient
-# mysqlclient==8.0.33
+#mysqlclient
+# mysqlclient==x.x.x
+# SQLAlchemy==x.x.x
+
+# ysqlclient==8.0.33
 # SQLAlchemy==2.0.21
 
 streamlit-option-menu
