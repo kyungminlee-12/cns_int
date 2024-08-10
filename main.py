@@ -1,8 +1,11 @@
 import streamlit as st
+import sqlalchemy
 import pandas as pd
 import streamlit_shadcn_ui as ui
 from streamlit_extras.colored_header import colored_header 
 from PIL import Image
+
+# https://docs.streamlit.io/develop/tutorials/databases/mysql
 
 # from time import sleep
 # from streamlit_option_menu import option_menu
@@ -41,7 +44,12 @@ def example():
     )
 # example()
 
-conn = st.connection('mysql', type='sql')
+# st.write("DB username:", st.secrets["db_username"])
+# st.write("DB password:", st.secrets["db_password"])
+# st.write(st.secrets)
+
+conn = st.connection('dbx', type='sql')
+# conn = st.experimental_connection('dbx', type='sql')
 table_name="co2_discharged_res"  
 
 @st.experimental_fragment(run_every="2s")
