@@ -51,7 +51,7 @@ def example():
 conn = st.connection('dbx', type='sql')
 table_name="co2_discharged_res"  
 
-@st.experimental_fragment(run_every="2s")
+# @st.experimental_fragment(run_every="2s")
 def show_amt_c02_discharged_test():
     select_data_query = """SELECT * FROM device_data.{} ;""".format(table_name)
     cur_c02_discharged = conn.query(select_data_query, ttl=3)
