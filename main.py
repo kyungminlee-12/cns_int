@@ -49,7 +49,6 @@ def example():
 # st.write(st.secrets)
 
 conn = st.connection('dbx', type='sql')
-# conn = st.experimental_connection('dbx', type='sql')
 table_name="co2_discharged_res"  
 
 @st.experimental_fragment(run_every="2s")
